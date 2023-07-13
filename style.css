@@ -1,0 +1,104 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}:root {
+   --bg-color: #212529;
+   --border-color: #666;
+   --font-color: #f1f5f9;
+   --primary-color: #4dff91;
+   --error-color: #ff0043;
+}
+body{
+   background-color: var(--bg-color);
+   color: var(--font-color);
+   font-family: 'ubuntu',sans-serif;
+}
+main{
+   display: block;
+   margin: 0 auto;
+   max-width: 40rem;
+   padding: 0 1.5rem 2.5rem;
+   position: relative;
+}
+header {
+   padding:2rem 0;
+}
+#themeSwitcher{
+   padding: 0.5rem 1rem;
+   background-color: var(--bg-color);
+   color: var(--font-color);
+   border: .125rem solid var(--font-color);
+   border-radius: 5px;
+   font-size: 14px;
+   cursor: pointer;
+}
+#themeSwitcher:hover{
+   background-color: var(--font-color);
+   color: var(--bg-color);
+}
+input{
+   width: 100%;
+   background-color: transparent;
+   border: 2px solid var(--border-color);
+   padding: 1rem;
+   border-radius: .5rem;
+   text-align: end;
+   display: block;
+   font-size: 1.75rem;
+   margin:  0 auto;
+   color: var(--font-color);
+}
+button{
+   border-radius: 0.25rem;
+   background-color: var(--primary-color);
+   font-weight: 700;
+   padding: .5rem 1rem;
+   border: none;
+}
+#keys{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 1rem;
+   margin: 2rem 0;
+}
+#keys button{
+   font-size: 1.5rem;
+   padding: 1rem;
+   color: var(--bg-color);
+   cursor: pointer;
+}
+#keys button:hover {
+   filter: opacity(0.8);
+}
+#result{
+   border-width: 2px 2px 2px 0;
+   border-radius: 0 .5rem .5rem 0;
+
+}
+#copyToClipboard{
+   background-color: transparent;
+   border: 2px solid var(--border-color);
+   color: var(--font-color);
+   border-radius: .5rem 0 0 .5rem;
+   padding: 1rem;
+   height: 4.25rem;
+   width: 6rem;
+   cursor: pointer;
+}
+.flex{
+ display: flex;
+} 
+.align-center{
+align-items: center;
+}
+.justify-between{
+justify-content: space-between;
+}
+.error {
+   background-color: var(--error-color);
+} 
+.success {
+   border-color: var(--primary-color) !important;
+   color: var(--primary-color) !important;
+}
